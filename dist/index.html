@@ -40,9 +40,29 @@
     .text-balance {
       text-wrap: balance;
     }
+    .access-gate {
+      background: radial-gradient(circle at 50% 15%, rgba(81, 34, 140, .65), transparent 38%), rgba(10, 8, 25, .96);
+    }
   </style>
 </head>
 <body class="bg-white text-gray-800 antialiased selection:bg-orange-500 selection:text-white">
+<!-- BEGIN: WhiteLabelAccessGate -->
+<div class="access-gate fixed inset-0 z-[100] flex items-center justify-center p-5 text-white transition-opacity duration-500" id="access-gate" role="dialog" aria-modal="true" aria-labelledby="access-gate-title">
+<div class="w-full max-w-md rounded-3xl border border-white/15 bg-[#171229]/95 p-7 text-center shadow-2xl shadow-black/50 backdrop-blur-xl sm:p-10">
+<div class="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-orange text-3xl shadow-lg shadow-orange-600/30">●</div>
+<p class="mb-2 text-xs font-bold tracking-[0.18em] text-orange-300">גישה פרטית</p>
+<h1 class="text-3xl font-black" id="access-gate-title">ברוכים הבאים ל-Orivet ישראל</h1>
+<p class="mt-3 leading-relaxed text-gray-300">העמוד הזה הותאם במיוחד עבורכם. הזינו את שם המותג כדי להמשיך.</p>
+<form class="mt-7 space-y-3" id="access-gate-form">
+<label class="sr-only" for="access-gate-password">סיסמה</label>
+<input class="w-full rounded-xl border border-white/15 bg-white/10 px-4 py-3.5 text-center text-lg tracking-[0.25em] text-white placeholder:text-gray-500 focus:border-orange-400 focus:ring-2 focus:ring-orange-400/50" id="access-gate-password" type="password" autocomplete="off" placeholder="סיסמה" required>
+<p class="hidden text-sm font-medium text-red-300" id="access-gate-error" role="alert">הסיסמה אינה נכונה. נסו שוב.</p>
+<button class="w-full rounded-xl bg-brand-orange px-5 py-3.5 font-bold shadow-lg shadow-orange-600/25 transition hover:bg-brand-orangeHover focus:outline-none focus:ring-2 focus:ring-orange-300" type="submit">כניסה לעמוד ←</button>
+</form>
+<p class="mt-5 text-xs text-gray-500">גישה אישית ללקוחות Orivet ישראל</p>
+</div>
+</div>
+<!-- END: WhiteLabelAccessGate -->
 <!-- BEGIN: MainHeader -->
 <header class="sticky top-0 z-50 bg-[#151327]/90 backdrop-blur-md border-b border-white/10 text-white transition-all">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
@@ -648,6 +668,23 @@
 <script data-purpose="event-handlers">
     // Auto-update copyright year
     document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    // White-label presentation gate. This is intentionally a visual gate, not secure authentication.
+    const accessGate = document.getElementById('access-gate');
+    const accessGateForm = document.getElementById('access-gate-form');
+    const accessGatePassword = document.getElementById('access-gate-password');
+    const accessGateError = document.getElementById('access-gate-error');
+
+    accessGateForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      if (accessGatePassword.value.trim().toLowerCase() === 'orivet') {
+        accessGate.classList.add('opacity-0', 'pointer-events-none');
+        window.setTimeout(() => accessGate.remove(), 500);
+        return;
+      }
+      accessGateError.classList.remove('hidden');
+      accessGatePassword.select();
+    });
   </script>
 <!-- END: InteractiveHandlers -->
 
