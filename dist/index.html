@@ -37,6 +37,18 @@
       font-family: 'Heebo', sans-serif;
       overflow-x: hidden;
     }
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 6rem;
+    }
+    [id] {
+      scroll-margin-top: 6rem;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
     .text-balance {
       text-wrap: balance;
     }
@@ -678,12 +690,31 @@
     accessGateForm.addEventListener('submit', (event) => {
       event.preventDefault();
       if (accessGatePassword.value.trim().toLowerCase() === 'orivet') {
+        // Always reveal the presentation from the beginning, even if the URL contains an anchor.
+        history.replaceState(null, '', `${window.location.pathname}${window.location.search}`);
+        window.scrollTo(0, 0);
         accessGate.classList.add('opacity-0', 'pointer-events-none');
-        window.setTimeout(() => accessGate.remove(), 500);
+        window.setTimeout(() => {
+          accessGate.remove();
+          window.scrollTo(0, 0);
+        }, 500);
         return;
       }
       accessGateError.classList.remove('hidden');
       accessGatePassword.select();
+    });
+
+    // Keep all in-page navigation smooth and account for the sticky header.
+    document.querySelectorAll('a[href^="#"]').forEach((link) => {
+      link.addEventListener('click', (event) => {
+        const targetId = link.getAttribute('href').slice(1);
+        const target = targetId ? document.getElementById(targetId) : document.body;
+        if (!target) return;
+
+        event.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        history.pushState(null, '', targetId ? `#${targetId}` : window.location.pathname);
+      });
     });
   </script>
 <!-- END: InteractiveHandlers -->
