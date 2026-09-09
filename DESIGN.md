@@ -49,7 +49,7 @@ Use close animal portraits to make dogs and cats feel individually seen, supplie
 - The science chapter opens with a centered explanation, then uses an asymmetric rounded proof field: a clinical veterinary photograph anchors a two-image dog-and-cat collage opposite the detailed copy and medical limitation.
 - FAQ uses native disclosure behavior.
 - Keyboard focus is a visible warm-orange outline.
-- Respect reduced-motion preferences; motion is limited to small state transitions.
+- Motion follows a cinematic record-coming-into-focus thesis: the hero assembles through crop and focus, grouped content resolves once on intersection, a slim progress line connects the long page, and anchor navigation uses interruptible quintic easing. Reduced-motion mode removes spatial choreography while preserving brief opacity feedback.
 
 ## Accessibility
 
