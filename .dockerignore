@@ -2,6 +2,7 @@
 .DS_Store
 **/.DS_Store
 resources/*
+!resources/logo_image.svg
 !resources/ofer/
 resources/ofer/*
 !resources/ofer/WhatsApp Image 2026-09-08 at 16.07.39 (3).jpeg

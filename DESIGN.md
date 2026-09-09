@@ -9,7 +9,7 @@
 - Daylight white `#FFFFFF`: primary page field.
 - Ink purple `#21152F`: primary text and footer.
 - Orivet purple `#542080`: authority, selected states, and one major story field.
-- Deep purple `#33134F`: expert profile field.
+- Deep purple `#33134F`: expert profile field and darkened header field for the white global wordmark.
 - Accessible orange `#C94612`: actions, annotations, emphasis, and icons.
 - Pale peach `#FFF0E7`: consultation field.
 - Pale lilac `#F2EAFA`: restrained informational support.
@@ -19,8 +19,7 @@ Orange is functional and editorial, not a background for long reading. Purple ca
 
 ## Typography
 
-- Display: **Secular One**, used for large Hebrew promises and decisive section headings.
-- Body and UI: **Noto Sans Hebrew**, weights 400–900.
+- Display, body, and UI: **Heebo**, weights 300–900. Weight, scale, color, and spacing—not a second typeface—create hierarchy.
 - Display tracking is tight but never below `-0.04em`. Body copy uses generous line height and a readable measure.
 - Headings carry their own hierarchy; do not add eyebrow labels above them.
 
@@ -32,9 +31,13 @@ Orange is functional and editorial, not a background for long reading. Purple ca
 - On mobile, layouts become a single clear reading path; product comparison stacks and a persistent consultation action appears at the bottom.
 - Rounded corners are reserved for actions, photography, the video feature, and the consultation form rather than applied to every content group.
 
+## Identity
+
+Use the supplied global Orivet wordmark at `resources/logo_image.svg` in the header and footer. Do not reconstruct the logo with text or CSS shapes.
+
 ## Photography
 
-Use close animal portraits to make dogs and cats feel individually seen, supplied packshots for product credibility, and the `resources/ofer/` collection to show Dr. Ofer Zadok in real clinical context. Mix young and adult animals and keep species representation balanced. Product images may float cleanly without rectangular photo frames. Do not present synthetic report data or imagery as a real customer result; label any visual approximation clearly.
+Use close animal portraits to make dogs and cats feel individually seen, supplied packshots for product credibility, and the `resources/ofer/` collection to show Dr. Ofer Zadok in real clinical context. Mix young and adult animals and keep species representation balanced. The animal portrait grid carries no descriptive badges; the photography remains uninterrupted. Product images may float cleanly without rectangular photo frames. Do not present synthetic report data or imagery as a real customer result; label any visual approximation clearly.
 
 ## Interaction
 
@@ -49,7 +52,7 @@ Use close animal portraits to make dogs and cats feel individually seen, supplie
 - The science chapter opens with a centered explanation, then uses an asymmetric rounded proof field: a clinical veterinary photograph anchors a two-image dog-and-cat collage opposite the detailed copy and medical limitation.
 - FAQ uses native disclosure behavior.
 - Keyboard focus is a visible warm-orange outline.
-- Motion follows a cinematic record-coming-into-focus thesis: the hero assembles through crop and focus, grouped content resolves once on intersection, a slim progress line connects the long page, and anchor navigation uses interruptible quintic easing. Reduced-motion mode removes spatial choreography while preserving brief opacity feedback.
+- Motion follows a cinematic record-coming-into-focus thesis: the hero assembles through crop and focus, grouped content resolves once on intersection, a slim progress line connects the long page, and anchor navigation uses reliable native smooth scrolling. Reduced-motion mode removes spatial choreography while preserving brief opacity feedback.
 
 ## Accessibility
 
