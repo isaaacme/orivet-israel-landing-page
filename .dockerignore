@@ -1,0 +1,16 @@
+.git
+.DS_Store
+**/.DS_Store
+resources/*
+!resources/ofer/
+resources/ofer/*
+!resources/ofer/WhatsApp Image 2026-09-08 at 16.07.39 (3).jpeg
+!resources/ofer/WhatsApp Image 2026-09-08 at 16.07.40.jpeg
+!resources/ofer/WhatsApp Image 2026-09-08 at 16.07.44.jpeg
+!resources/ofer/WhatsApp Image 2026-09-08 at 16.07.46.jpeg
+!resources/packshots/
+resources/packshots/*
+!resources/packshots/זיהוי גזעים לכלב מעורב .png
+!resources/packshots/זיהוי גזעים + פאנל מחלות נרחב לכלב מעורב .png
+!resources/packshots/פאנל מחלות ותכונות גנטיות לחתול .jpg
+!resources/orivet-dna-sample-collection.mp4
