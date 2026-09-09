@@ -44,7 +44,7 @@ Use close animal portraits to make dogs and cats feel individually seen, supplie
 - Product species filtering uses a compact segmented control.
 - Mobile navigation uses an accessible disclosure button with Escape and link-close behavior.
 - Consultation fields compose a prefilled WhatsApp message, show an in-page handoff status, and never send without the visitor confirming in WhatsApp.
-- The at-home sampling chapter embeds the supplied two-minute MP4 with native accessible controls, inline mobile playback, and a download fallback.
+- The at-home sampling chapter embeds the CDN-hosted two-minute MP4 with native accessible controls, no initial preload, inline mobile playback, and a download fallback.
 - The Dr. Ofer gallery uses a rounded stage, previous/next controls, clickable thumbnails, horizontal thumbnail scrolling, and touch swiping.
 - The science chapter opens with a centered explanation, then uses an asymmetric rounded proof field: a clinical veterinary photograph anchors a two-image dog-and-cat collage opposite the detailed copy and medical limitation.
 - FAQ uses native disclosure behavior.
