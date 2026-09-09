@@ -26,7 +26,7 @@ Orange is functional and editorial, not a background for long reading. Purple ca
 
 ## Composition
 
-- Prefer continuous rules, flowing editorial sequences, and large photography over repeated rounded cards. Every section introduction uses a centered heading with its supporting copy directly beneath it; detailed lists and form fields retain reading-appropriate alignment. The animal portrait chapter uses a uniform square portrait grid.
+- Prefer continuous rules, flowing editorial sequences, and large photography over repeated rounded cards. Every section introduction uses a centered heading with its supporting copy directly beneath it; detailed lists and form fields retain reading-appropriate alignment. The animal portrait chapter uses a square bento composition, while the four DNA learning outcomes use a restrained 2×2 informational grid.
 - The opening pairs a decisive promise with overlapping candid dog and cat portraits.
 - Product choice appears early as three detailed kit cards and later as a full three-column comparison.
 - On mobile, layouts become a single clear reading path; product comparison stacks and a persistent consultation action appears at the bottom.
@@ -38,11 +38,15 @@ Use close animal portraits to make dogs and cats feel individually seen, supplie
 
 ## Interaction
 
+- Interface icons follow Feather’s 24px outline language with round caps and joins; do not use Unicode symbols as controls.
 - Primary action: orange pill button leading to package choice or consultation.
 - Secondary action: white button with a purple defined edge.
 - Product species filtering uses a compact segmented control.
 - Mobile navigation uses an accessible disclosure button with Escape and link-close behavior.
 - Consultation fields compose a prefilled WhatsApp message, show an in-page handoff status, and never send without the visitor confirming in WhatsApp.
+- The at-home sampling chapter embeds the supplied two-minute MP4 with native accessible controls, inline mobile playback, and a download fallback.
+- The Dr. Ofer gallery uses a rounded stage, previous/next controls, clickable thumbnails, horizontal thumbnail scrolling, and touch swiping.
+- The science chapter opens with a centered explanation, then uses an asymmetric rounded proof field: a clinical veterinary photograph anchors a two-image dog-and-cat collage opposite the detailed copy and medical limitation.
 - FAQ uses native disclosure behavior.
 - Keyboard focus is a visible warm-orange outline.
 - Respect reduced-motion preferences; motion is limited to small state transitions.
